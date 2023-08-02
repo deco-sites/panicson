@@ -26,5 +26,12 @@
     "**/.DS_Store": true,
     "**/Thumbs.db": true
   },
-  "hide-files.files": []
+  "hide-files.files": [],
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "javascript": "javascript",
+    "css": "css"
+  },
+  "css.validate": false,
+  "editor.inlineSuggest.enabled": true
 }

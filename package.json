@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "@types/node": "^20.4.2"
+  },
+  "dependencies": {
+    "daisyui": "^3.2.1"
+  }
+}

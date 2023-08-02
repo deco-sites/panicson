@@ -9217,7 +9217,37 @@
       "required": [],
       "title": "EditableProps"
     },
-    "ZGVjby1zaXRlcy9wYW5pY3Nvbi9jb21wb25lbnRzL2hlYWRlci9IZWFkZXIudHN4@NavItem": {
+    "ZGVjby1zaXRlcy9wYW5pY3Nvbi9jb21wb25lbnRzL3NlYXJjaC9TZWFyY2hiYXIudHN4@4f2a67071966a2f109c06f6dedc088d6&EditableProps": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wYW5pY3Nvbi9jb21wb25lbnRzL3NlYXJjaC9TZWFyY2hiYXIudHN4@EditableProps"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "variant": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "const": "desktop",
+                  "default": "desktop"
+                },
+                {
+                  "type": "string",
+                  "const": "mobile",
+                  "default": "mobile"
+                }
+              ],
+              "type": "string",
+              "title": "Variant"
+            }
+          },
+          "required": []
+        }
+      ],
+      "title": "4f2a67071966a2f109c06f6dedc088d6&EditableProps"
+    },
+    "ZGVjby1zaXRlcy9wYW5pY3Nvbi9jb21wb25lbnRzL2hlYWRlci9OYXZJdGVtLnRzeA==@INavItem": {
       "type": "object",
       "properties": {
         "label": {
@@ -9231,42 +9261,7 @@
         "children": {
           "type": "array",
           "items": {
-            "type": "object",
-            "properties": {
-              "label": {
-                "type": "string",
-                "title": "Label"
-              },
-              "href": {
-                "type": "string",
-                "title": "Href"
-              },
-              "children": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "label": {
-                      "type": "string",
-                      "title": "Label"
-                    },
-                    "href": {
-                      "type": "string",
-                      "title": "Href"
-                    }
-                  },
-                  "required": [
-                    "label",
-                    "href"
-                  ]
-                },
-                "title": "Children"
-              }
-            },
-            "required": [
-              "label",
-              "href"
-            ]
+            "$ref": "#/definitions/ZGVjby1zaXRlcy9wYW5pY3Nvbi9jb21wb25lbnRzL2hlYWRlci9OYXZJdGVtLnRzeA==@INavItem"
           },
           "title": "Children"
         },
@@ -9274,7 +9269,10 @@
           "type": "object",
           "properties": {
             "src": {
-              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+              "type": [
+                "string",
+                "null"
+              ],
               "title": "Src"
             },
             "alt": {
@@ -9293,14 +9291,14 @@
         "label",
         "href"
       ],
-      "title": "NavItem"
+      "title": "INavItem"
     },
-    "ZGVjby1zaXRlcy9wYW5pY3Nvbi9jb21wb25lbnRzL2hlYWRlci9IZWFkZXIudHN4@NavItem[]": {
+    "ZGVjby1zaXRlcy9wYW5pY3Nvbi9jb21wb25lbnRzL2hlYWRlci9OYXZJdGVtLnRzeA==@INavItem[]": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9wYW5pY3Nvbi9jb21wb25lbnRzL2hlYWRlci9IZWFkZXIudHN4@NavItem"
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9wYW5pY3Nvbi9jb21wb25lbnRzL2hlYWRlci9OYXZJdGVtLnRzeA==@INavItem"
       },
-      "title": "NavItem[]"
+      "title": "INavItem[]"
     },
     "ZGVjby1zaXRlcy9wYW5pY3Nvbi9jb21wb25lbnRzL2hlYWRlci9IZWFkZXIudHN4@Props": {
       "type": "object",
@@ -9313,11 +9311,11 @@
           "title": "Alerts"
         },
         "searchbar": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9wYW5pY3Nvbi9jb21wb25lbnRzL3NlYXJjaC9TZWFyY2hiYXIudHN4@EditableProps",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wYW5pY3Nvbi9jb21wb25lbnRzL3NlYXJjaC9TZWFyY2hiYXIudHN4@4f2a67071966a2f109c06f6dedc088d6&EditableProps",
           "title": "Search Bar"
         },
         "navItems": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9wYW5pY3Nvbi9jb21wb25lbnRzL2hlYWRlci9IZWFkZXIudHN4@NavItem[]",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wYW5pY3Nvbi9jb21wb25lbnRzL2hlYWRlci9OYXZJdGVtLnRzeA==@INavItem[]",
           "title": "Navigation items",
           "description": "Navigation items used both on mobile and desktop menus"
         },
@@ -9572,28 +9570,35 @@
           "type": "object",
           "properties": {
             "href": {
-              "type": "string",
+              "type": [
+                "string",
+                "null"
+              ],
               "title": "Href"
             },
             "title": {
-              "type": "string",
+              "type": [
+                "string",
+                "null"
+              ],
               "title": "Title"
             },
             "subTitle": {
-              "type": "string",
+              "type": [
+                "string",
+                "null"
+              ],
               "title": "Sub Title"
             },
             "label": {
-              "type": "string",
+              "type": [
+                "string",
+                "null"
+              ],
               "title": "Label"
             }
           },
-          "required": [
-            "href",
-            "title",
-            "subTitle",
-            "label"
-          ],
+          "required": [],
           "title": "Action"
         }
       },
